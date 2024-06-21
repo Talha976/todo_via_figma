@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 343px;
+    height: 296px;
+    margin-top: 120px;
+    left: 469px;
+    gap: 0px;
+    border-radius: 100px 0px 0px 0px;
+    opacity: 0px;
+
+}
+
+h2 {
+    width: 88px;
+    height: 36px;
+    top: 212px;
+    left: 597px;
+    gap: 0px;
+    opacity: 0px;    
+    margin-bottom:30px ;
+}
+
+input[type='email']{
+
+    margin-bottom: 10px;
+    background-color: rgb(214, 214, 214);
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 3px;
+    padding-left: 30px;
+    width: 343px;
+    height: 50px;
+    top: 365px;
+    left: 469px;
+    gap: 0px;
+    opacity: 0px;
+}
+#password-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 343px;
+    height: 50px; 
+    background-color: rgb(214, 214, 214);
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 3px;
+    padding-left: 30px;
+    align-items: center;
+}
+input[type='password']{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(214, 214, 214);
+}
+
+input::placeholder {
+    color: rgb(137, 136, 136);
+    font-size: 15px;
+    font-weight: bold;
+
+}
+#showPasswordBtn{
+    font-weight: bold;
+    color: black;
+}
+
+#btn {
+    width: 343px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#btn:hover {
+    background-color: gold;
+}

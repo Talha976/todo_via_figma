@@ -1,0 +1,216 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#menu {
+    display: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 30%;
+    transition: 0.5s all ease-in-out;
+}
+
+.main {
+    /* Adjust margin to accommodate fixed sidebar */
+    width: 70%;
+    padding: 20px;
+    /* Add padding to content */
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    /* Enable scrolling if content exceeds viewport height */
+}
+
+
+.upper {
+    display: flex;
+    flex-direction: column;
+}
+
+#task {
+    width: 250px;
+    height: 55px;
+    top: 42px;
+    padding: 16.55px 123px 15.55px 47px;
+    gap: 0px;
+    border-radius: 0px 100px 100px 0px;
+    opacity: 0px;
+
+
+}
+
+#location {
+    width: 250px;
+    height: 55px;
+    top: 114px;
+    padding: 16.55px 89px 15.55px 48px;
+    gap: 0px;
+    border-radius: 0px 100px 100px 0px;
+    opacity: 0px;
+
+}
+
+#logout {
+    width: 250px;
+    height: 55px;
+    top: 638px;
+    padding: 17px 103px 16px 48px;
+    gap: 0px;
+    border-radius: 0px 100px 100px 0px;
+    opacity: 0px;
+    margin-bottom: 30px;
+}
+
+#task:hover,
+#location:hover,
+#logout:hover {
+    background-color: black;
+
+    .a {
+
+        color: white;
+    }
+
+}
+
+#task:active,
+#location:active,
+#logout:active {
+    background-color: black;
+
+    .a:active {
+
+        color: white;
+    }
+
+}
+
+.a {
+    color: black;
+    text-decoration: none !important;
+}
+
+.a i {
+    margin-right: 10px;
+    /* Adjust the value as per your preference */
+}
+
+
+.location_list {
+    list-style-type: none;
+    gap: 5px;
+}
+
+.children {
+    opacity: 9px;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+#checkIn {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Show the toggle button only on small screens */
+
+@media only screen and (max-width: 768px) {
+
+    .display {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: gray;
+        z-index: 1000;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .sidebar.active {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        z-index: 1000;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+
+    .display {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+
+    #menu {
+        display: block;
+        /* Show the toggle button */
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        z-index: 1000;
+    }
+    .side{
+        
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .sidebar {
+        display: none;
+        /* Hide sidebar on smaller screens */
+    }
+
+    .display {
+        margin-left: 0;
+        /* Remove margin for main content on smaller screens */
+        display: flex;
+        width: 100%;
+    }
+}

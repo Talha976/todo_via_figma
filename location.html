@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Location</title>
+    <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
+    integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css"
+    integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/svg-with-js.min.css"
+    integrity="sha512-JgLoPAy0vc/kYzFhTyokdFDtyTdsU5TiJQ1zzMHL4aL0QnDdWGC5CnG3FZ7eRhncidUaFoqB7W/Hbs8X0cvzXQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-K+Q/OyTkx3Q/J96XNq3joVfUS9B2S8CDWcdcbVUMqI2n4dBi4/H4+2NbcyRc9+t9lnn6ILdQCGqW5CbqwjDFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <img src="images/menu.png" height="25px" width="35px" alt="Loading..." id="menu" >
+    <div class="content">
+        
+        <div class="sidebar" id="sidebar">
+            <aside class="side">
+                <div class="upper">
+                    <div id="task"> <a class="a" href="todo.html"><i class="fas fa-tasks"></i> Task</a> </div>
+                    <div id="location"> <a class="a" href="location.html"><i class="fas fa-location"></i> Location</a>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div id="logout"> <a class="a" onclick="logout()" href="index.html"> <i class="fas fa-sign-out"> </i> Logout</a>
+                    </div>
+                </div>
+
+                <!-- Add a toggle button for the sidebar -->
+             
+
+
+            </aside>
+        </div>
+        <div class="display" style="margin-top: 18px;">
+            <p onclick="checkIn()" id="checkIn">+ Check In</p>
+            <h4>Current Location</h4>
+            <ul id="currentLocation">
+                <!-- Current location will be displayed here -->
+            </ul>
+            <h4>Previous Locations</h4>
+            <ul id="previousLocation">
+                <!-- Previous locations will be displayed here -->
+            </ul>
+        </div>
+
+    </div>
+   <script src="location.js"></script>
+</body>
+
+</html>

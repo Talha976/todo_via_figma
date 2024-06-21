@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Todo Via Figma</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="todo.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
+        integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css"
+        integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/svg-with-js.min.css"
+        integrity="sha512-JgLoPAy0vc/kYzFhTyokdFDtyTdsU5TiJQ1zzMHL4aL0QnDdWGC5CnG3FZ7eRhncidUaFoqB7W/Hbs8X0cvzXQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-K+Q/OyTkx3Q/J96XNq3joVfUS9B2S8CDWcdcbVUMqI2n4dBi4/H4+2NbcyRc9+t9lnn6ILdQCGqW5CbqwjDFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    
+    <img src="images/menu.png" height="25px" width="35px" alt="Loading..." id="menu" >
+    <div class="content">
+        
+        <div class="sidebar">
+            <aside class="side">
+                <div class="upper">
+                    <div id="task"> <a class="a" href="todo.html"><i class="fas fa-tasks"></i> Task</a> </div>
+                    <div id="location"> <a class="a" href="location.html"><i class="fas fa-location"></i> Location</a> </div>
+                </div>
+                <div class="lower">
+                    <div id="logout"> <a class="a" onclick="logout()" href="index.html"> <i class="fas fa-sign-out"> </i> Logout</a> </div>
+                </div>
+
+          
+
+
+            </aside>
+        </div>
+
+
+        <div class="main" id="task1">
+            <p id="openPopupBtn">+ Add New Task</p>
+
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <h3 style="font-size: 30px;">New Task</h3>
+                    <form id="formData">
+                        <div class="innerDiv"> <i class="fas fa-list"></i> <input type="text" placeholder="Summary"
+                                id="summary" required></div>
+                        <hr>
+                        <div class="innerDiv"><i class="fas fa-info-circle"></i> <input type="text"
+                                placeholder="Description" id="description">
+                        </div> <br>
+                        <hr>
+                        <div class="innerDiv"><i class="fas fa-clock"></i> <input type="datetime-local"
+                                placeholder="Due Date" id="date"></div>
+                        <hr>
+                        <div class="btn">
+                            <input type="submit" value="Save">
+                            <p id="closePopupBtn">Cancel</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="display">
+                <div class="incomplete-tasks">
+                    <h4>Incomplete </h4>
+                    <ul class="todo-list" id="incomplete-tasks-list"></ul>
+                </div>
+                <div class="completed-tasks">
+                    <h4>Completed </h4>
+                    <ul class="todo-list" id="completed-tasks-list"></ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="todo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

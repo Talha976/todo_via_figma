@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.main {
+    /* Adjust margin to accommodate fixed sidebar */
+    width: 70%;
+    padding: 20px;
+    /* Add padding to content */
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    /* Enable scrolling if content exceeds viewport height */
+}
+
+
+.upper {
+    display: flex;
+    flex-direction: column;
+}
+
+#task {
+    width: 250px;
+    height: 55px;
+    top: 42px;
+    padding: 16.55px 123px 15.55px 47px;
+    gap: 0px;
+    border-radius: 0px 100px 100px 0px;
+    opacity: 0px;
+
+
+}
+
+#location {
+    width: 250px;
+    height: 55px;
+    top: 114px;
+    padding: 16.55px 89px 15.55px 48px;
+    gap: 0px;
+    border-radius: 0px 100px 100px 0px;
+    opacity: 0px;
+
+}
+
+#logout {
+    width: 250px;
+    height: 55px;
+    top: 638px;
+    padding: 17px 103px 16px 48px;
+    gap: 0px;
+    border-radius: 0px 100px 100px 0px;
+    opacity: 0px;
+    margin-bottom: 30px;
+}
+
+#task:hover,
+#location:hover,
+#logout:hover {
+    background-color: black;
+
+    .a {
+
+        color: white;
+    }
+
+}
+
+.a:active {
+    background-color: black;
+    color: white;
+}
+
+.a {
+    color: black;
+    text-decoration: none !important;
+}
+
+
+.a i {
+    margin-right: 10px;
+    /* Adjust the value as per your preference */
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 50%;
+    height: 450px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+    top: 114px;
+    left: 258px;
+    gap: 0px;
+    border-radius: 5px;
+    opacity: 0px;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup.active .popup-content {
+    transform: translateY(0);
+}
+
+input[type='text'],
+[type='datetime-local'] {
+
+    padding: 10px;
+
+    border: none;
+    outline: none;
+}
+
+.todo-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.todo-item #img {
+    height: 30px;
+    width: 40px;
+}
+
+#checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+
+.popup-content form {
+    /* Add margin-top to the form to create space for the Cancel button */
+    margin-top: 20px;
+
+}
+
+
+#openPopupBtn {
+    cursor: pointer;
+}
+
+#closePopupBtn {
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+#formData {
+    padding: 30px;
+}
+
+#formData .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#formData .btn input[type='submit'] {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    height: 40px;
+}
+
+.completed-tasks {
+    margin-top: 20px;
+}
+
+.incomplete-tasks {
+    margin-top: 20px;
+}
+
+.completed-tasks h2,
+.incomplete-tasks h2 {
+    text-align: center;
+}
+
+/* Style for the toggle button */
+.toggle-btn {
+    display: none;
+    /* Initially hide the toggle button */
+    cursor: pointer;
+}
+
+.toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+#menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* Show the toggle button only on small screens */
+@media only screen and (max-width: 768px) {}
+
+
+@media only screen and (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+    }
+
+    .main {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: gray;
+        z-index: 1000;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .sidebar.active {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        z-index: 1000;
+    }
+    .side{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .popup-content {
+        width: 95%;
+        max-width: none;
+    }
+
+    .main {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: gray;
+        z-index: 1000;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .sidebar.active {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        z-index: 1000;
+    }
+    .side{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+        /* Hide sidebar on smaller screens */
+    }
+
+    .main {
+        margin-left: 0;
+        /* Remove margin for main content on smaller screens */
+    }
+}
